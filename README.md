@@ -1,10 +1,10 @@
-# Booking Microservice 
+# Flight Microservice 
 
-This Microservice is responsible for managing the bookings in the Utopia Airline. It exposes some REST APIs to its consumers. 
+This Microservice is responsible for managing the flights in the Utopia Airline. It exposes some REST APIs to its consumers. 
 
 ## API EXAMPLE
 
-`GET /api/bookings/?queryParams`
+`GET /api/flights/?queryParams`
 
 ## AUTHENTICATION
 
