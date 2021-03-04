@@ -1,0 +1,23 @@
+{
+  "name": "flights",
+  "version": "1.0.0",
+  "description": "Controller Service, and Routes for Flights",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "flights"
+  ],
+  "author": "Samuel Johnson",
+  "license": "ISC",
+  "dependencies": {
+    "@utopia-airlines-wss/common": "^0.1.1",
+    "cookie-session": "^1.4.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "install": "^0.13.0",
+    "morgan": "^1.10.0",
+    "sequelize": "^6.3.5"
+  }
+}
