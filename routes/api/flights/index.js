@@ -1,17 +1,26 @@
-
 const { Router } = require("express");
-const { requireAuthentication } = require("@utopia-airlines-wss/common/middleware");
+const {
+  requireAuthentication,
+} = require("@utopia-airlines-wss/common/middleware");
 
 const router = Router();
 
 const { flightController } = require("../../../controller");
 
-router.route("/")
+router
+  .route("/")
   .get(flightController.getAll)
   .all(requireAuthentication({ roles: ["ADMIN"] }))
   .post(flightController.create);
 
-router.route("/:id")
+router
+  .route("/featured-fares")
+  .get(flightController.getAllFeatured)
+  .all(requireAuthentication({ roles: ["ADMIN"] }))
+  .post(flightController.create);
+
+router
+  .route("/:id")
   .get(flightController.getById)
   .all(requireAuthentication({ roles: ["ADMIN"] }))
   .put(flightController.updateById)
